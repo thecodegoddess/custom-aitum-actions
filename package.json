@@ -1,7 +1,7 @@
 {
   "name": "aitum-cc",
   "version": "1.0.2",
-  "description": "Aitum's Custom Code Wrapper",
+  "description": "TheCodeGoddess Custom Aitum Actions",
   "main": "src/index.ts",
   "scripts": {
     "start": "tsnd --debounce 500 --clear src/index",
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Aitum/aitum-cc.git"
+    "url": "git+https://github.com/thecodegoddess/aitum-cc"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Aitum/aitum-cc/issues"
+    "url": "https://github.com/thecodegoddess/aitum-cc/issues"
   },
-  "homepage": "https://github.com/Aitum/aitum-cc#readme",
+  "homepage": "https://github.com/thecodegoddess/aitum-cc#readme",
   "dependencies": {
     "aitum.js": "^2.0.0-beta.2",
     "dotenv": "^16.0.3",
@@ -28,6 +28,9 @@
   },
   "devDependencies": {
     "@types/node": "^18.11.10",
-    "@types/uuid": "^9.0.0"
+    "@types/uuid": "^9.0.0",
+    "@typescript-eslint/eslint-plugin": "^6.4.0",
+    "@typescript-eslint/parser": "^6.4.0",
+    "eslint": "^8.47.0"
   }
 }

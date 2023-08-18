@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { AitumCC } from 'aitum.js';
 import * as dotenv from 'dotenv';
 import { resolve } from 'path';
