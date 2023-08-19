@@ -7,7 +7,9 @@
     "start": "tsnd --debounce 500 --clear src/index",
     "setup": "ts-node src/setup",
     "upgrade": "npm i aitum.js@latest",
-    "devdeps": "npm link aitum.js"
+    "devdeps": "npm link aitum.js",
+    "lint": "eslint src/",
+    "tsc": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
