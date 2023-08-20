@@ -67,7 +67,7 @@ type SearchFilesOptionsType = {
   extension: string,
 }
 
-const searchFiles = async (options: SearchFilesOptionsType) => {
+async function searchFiles(options: SearchFilesOptionsType) {
   const {
     directory: directoryPath,
     extension,
@@ -106,7 +106,7 @@ const searchFiles = async (options: SearchFilesOptionsType) => {
   }
 
   return path.join(directoryPath, newestFile);
-};
+}
 
 /** ********* CONFIG ********** */
 // The custom code action name
