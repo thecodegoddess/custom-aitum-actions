@@ -1,7 +1,7 @@
 :root {
-  --text-shadow-smaller: 1px;
-  --text-shadow-larger: 3px;
-  --text-shadow: var(--text-shadow-smaller)
+  --text-shadow-smaller: 0.02857143em;
+  --text-shadow-larger: 0.05454545em;
+  --text-shadow: var(--text-shadow-smaller);
 }
 
 *,
@@ -20,20 +20,20 @@ html {
   --dk-green: #85ec05;
   --dk-purple: #442174;
 
-  font-size: 100%;
+  font-size: 150%;
   margin: 0;
   padding: 0;
 }
 
 @media screen and (min-width: 1080px){
   html {
-    font-size: 125%;
+    font-size: 175%;
   }
 }
 
 @media screen and (min-width: 1920px){
   html {
-    font-size: 150%;
+    font-size: 200%;
   }
 }
 
@@ -48,6 +48,13 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
+}
+
+.text-shadow {
+  text-shadow: var(--text-shadow) var(--text-shadow) 0 var(--shadow-color),
+  calc(var(--text-shadow) * -1) var(--text-shadow) 0 var(--shadow-color),
+  calc(var(--text-shadow) * -1) calc(var(--text-shadow) * -1) 0 var(--shadow-color),
+  var(--text-shadow) calc(var(--text-shadow) * -1) 0 var(--shadow-color);
 }
 
 .end-credits {
@@ -69,10 +76,6 @@ h1, h2, h3, h4, h5, h6 {
   color: var(--text-color);
   font-size: 1.75em;
   text-align: center;
-  text-shadow: var(--text-shadow) var(--text-shadow) 0 var(--shadow-color),
-  calc(var(--text-shadow) * -1) var(--text-shadow) 0 var(--shadow-color),
-  calc(var(--text-shadow) * -1) calc(var(--text-shadow) * -1) 0 var(--shadow-color),
-  var(--text-shadow) calc(var(--text-shadow) * -1) 0 var(--shadow-color);
 }
 
 .end-credits__window {
@@ -86,11 +89,15 @@ h1, h2, h3, h4, h5, h6 {
   list-style: none;
   position: absolute;
   inset: 0;
-  animation: scrollCredits calc(var(--credits-length, 6) * 3000ms) both linear;
-  animation-delay: 1000ms;
+  animation: scrollCredits calc(var(--credits-length, 6) * 2500ms) both linear;
+  animation-delay: 800ms;
 }
 
 .end-credits__name {
+  --shadow-color: var(--purple);
+  --text-color: white;
+  --text-shadow: var(--text-shadow-larger);
+
   height: 60vh;
   display: flex;
   justify-content: center;

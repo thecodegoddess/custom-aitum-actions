@@ -11,11 +11,11 @@
 <body>
 <main>
   <section class="end-credits" style="--credits-length:<%= creditsLength -%>">
-    <h2 class="end-credits__title">Thank you to all these amazing people for chatting with us</h2>
+    <h2 class="end-credits__title text-shadow">Thank you to all these amazing people for chatting with us</h2>
       <div class="end-credits__window">
         <ul class="end-credits__list">
           <%_ credits.forEach(function(name) { -%>
-            <li class="end-credits__name"><span><%= name -%></span></li>
+            <li class="end-credits__name text-shadow"><span><%= name -%></span></li>
           <%_ }) -%>
             <li class="end-credits__name"><span>Thank You!</span></li>
         </ul>
