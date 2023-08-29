@@ -1,0 +1,110 @@
+:root {
+  --text-shadow-smaller: 1px;
+  --text-shadow-larger: 3px;
+  --text-shadow: var(--text-shadow-smaller)
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+html {
+  --yellow: #f3e362;
+  --dk-yellow: #efd606;
+  --purple: #734aaa;
+  --blue: #a2e4e2;
+  --dk-blue: #01f6ef;
+  --green: #bdda99;
+  --dk-green: #85ec05;
+  --dk-purple: #442174;
+
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+@media screen and (min-width: 1080px){
+  html {
+    font-size: 125%;
+  }
+}
+
+@media screen and (min-width: 1920px){
+  html {
+    font-size: 150%;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+
+  font-family: 'Lilita One', cursive;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: normal;
+}
+
+.end-credits {
+  --end-credits-height: 60vh;
+
+  display: flex;
+  margin-top: 4vh;
+  flex-direction: column;
+  margin-inline: auto;
+  width: 65vw;
+  font-size: 1rem;
+}
+
+.end-credits__title {
+  --shadow-color: var(--yellow);
+  --text-shadow: var(--text-shadow-smaller);
+  --text-color: var(--purple);
+
+  color: var(--text-color);
+  font-size: 1.75em;
+  text-align: center;
+  text-shadow: var(--text-shadow) var(--text-shadow) 0 var(--shadow-color),
+  calc(var(--text-shadow) * -1) var(--text-shadow) 0 var(--shadow-color),
+  calc(var(--text-shadow) * -1) calc(var(--text-shadow) * -1) 0 var(--shadow-color),
+  var(--text-shadow) calc(var(--text-shadow) * -1) 0 var(--shadow-color);
+}
+
+.end-credits__window {
+  height: var(--end-credits-height);
+  overflow: hidden;
+  position: relative;
+}
+
+.end-credits__list {
+  padding: 0;
+  list-style: none;
+  position: absolute;
+  inset: 0;
+  animation: scrollCredits calc(var(--credits-length, 6) * 3000ms) both linear;
+  animation-delay: 1000ms;
+}
+
+.end-credits__name {
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2.75em;
+  color: var(--text-color, black);
+}
+
+@keyframes scrollCredits {
+  0% {
+    top: var(--end-credits-height);
+  }
+
+  100% {
+    top: calc(var(--end-credits-height) * calc(var(--credits-length, 6) * -1));
+  }
+}
